@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j1vyujlsbchy"
-path="res://.godot/imported/Bitmask references 1.png-6ee6ef22445def10b329f0217d26cb56.ctex"
+uid="uid://d1uiyswc3kolu"
+path="res://.godot/imported/free_cow_sprites.png-a9965678854f1ff58f153e07cb36f37a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tilesets/Bitmask references 1.png"
-dest_files=["res://.godot/imported/Bitmask references 1.png-6ee6ef22445def10b329f0217d26cb56.ctex"]
+source_file="res://characters/free_cow_sprites.png"
+dest_files=["res://.godot/imported/free_cow_sprites.png-a9965678854f1ff58f153e07cb36f37a.ctex"]
 
 [params]
 

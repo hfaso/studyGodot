@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1uiyswc3kolu"
-path="res://.godot/imported/Free Cow Sprites.png-ed7acb642527935130ea1b28281b2e54.ctex"
+uid="uid://jxw7sd03laje"
+path="res://.godot/imported/bitmask_references_2.png-40502882f9fbecc0d014e7786bd221d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Free Cow Sprites.png"
-dest_files=["res://.godot/imported/Free Cow Sprites.png-ed7acb642527935130ea1b28281b2e54.ctex"]
+source_file="res://tilesets/bitmask_references_2.png"
+dest_files=["res://.godot/imported/bitmask_references_2.png-40502882f9fbecc0d014e7786bd221d4.ctex"]
 
 [params]
 

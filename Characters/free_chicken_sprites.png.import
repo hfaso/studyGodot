@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dhcaoswiqadfg"
-path="res://.godot/imported/Basic Charakter Actions.png-08de2c4bfa644b68f74ab1b515127b06.ctex"
+uid="uid://c3a6ue7hws6ao"
+path="res://.godot/imported/free_chicken_sprites.png-8c9a727eef4fae81f1598dcdef621d0c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Characters/Basic Charakter Actions.png"
-dest_files=["res://.godot/imported/Basic Charakter Actions.png-08de2c4bfa644b68f74ab1b515127b06.ctex"]
+source_file="res://characters/free_chicken_sprites.png"
+dest_files=["res://.godot/imported/free_chicken_sprites.png-8c9a727eef4fae81f1598dcdef621d0c.ctex"]
 
 [params]
 
