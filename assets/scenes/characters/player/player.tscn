@@ -1,9 +1,10 @@
-[gd_scene load_steps=47 format=3 uid="uid://u1d6c15qfvrg"]
+[gd_scene load_steps=48 format=3 uid="uid://u1d6c15qfvrg"]
 
 [ext_resource type="Texture2D" uid="uid://b62ct1tgo1x1" path="res://assets/game/characters/basic_charakter_actions.png" id="1_hynwy"]
 [ext_resource type="Texture2D" uid="uid://d4lbtess564jk" path="res://assets/game/characters/basic_charakter_spritesheet.png" id="2_n7m8t"]
 [ext_resource type="Script" uid="uid://bck3r46pk5b2t" path="res://scripts/state_machine/node_state_machine.gd" id="3_n7m8t"]
 [ext_resource type="Script" uid="uid://b4r8rpa87b3fu" path="res://assets/scenes/characters/player/idle_state.gd" id="4_yk7gr"]
+[ext_resource type="Script" uid="uid://cy0761dp1466h" path="res://assets/scenes/characters/player/walk_state.gd" id="5_jfq05"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yk7gr"]
 atlas = ExtResource("1_hynwy")
@@ -409,5 +410,10 @@ initial_node_state = NodePath("Idle")
 
 [node name="Idle" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
 script = ExtResource("4_yk7gr")
+player = NodePath("../..")
+animated_sprite_2d = NodePath("../../AnimatedSprite2D")
+
+[node name="Walk" type="Node" parent="StateMachine" node_paths=PackedStringArray("player", "animated_sprite_2d")]
+script = ExtResource("5_jfq05")
 player = NodePath("../..")
 animated_sprite_2d = NodePath("../../AnimatedSprite2D")
