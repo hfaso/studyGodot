@@ -1,14 +1,14 @@
 [gd_scene load_steps=52 format=3 uid="uid://u1d6c15qfvrg"]
 
 [ext_resource type="Texture2D" uid="uid://b62ct1tgo1x1" path="res://assets/game/characters/basic_charakter_actions.png" id="1_hynwy"]
-[ext_resource type="Script" uid="uid://crirmjwda5d13" path="res://assets/scenes/characters/player/player.gd" id="1_swbuq"]
+[ext_resource type="Script" uid="uid://crirmjwda5d13" path="res://scenes/characters/player/player.gd" id="1_swbuq"]
 [ext_resource type="Texture2D" uid="uid://d4lbtess564jk" path="res://assets/game/characters/basic_charakter_spritesheet.png" id="2_n7m8t"]
 [ext_resource type="Script" uid="uid://bck3r46pk5b2t" path="res://scripts/state_machine/node_state_machine.gd" id="3_n7m8t"]
-[ext_resource type="Script" uid="uid://b4r8rpa87b3fu" path="res://assets/scenes/characters/player/idle_state.gd" id="4_yk7gr"]
-[ext_resource type="Script" uid="uid://cy0761dp1466h" path="res://assets/scenes/characters/player/walk_state.gd" id="5_jfq05"]
-[ext_resource type="Script" uid="uid://n2vccdy6i0lf" path="res://assets/scenes/characters/player/chopping_state.gd" id="7_x2wlb"]
-[ext_resource type="Script" uid="uid://3i4xwf6b8ymf" path="res://assets/scenes/characters/player/tilling_state.gd" id="8_c87pa"]
-[ext_resource type="Script" uid="uid://c0asxq6vpxtxu" path="res://assets/scenes/characters/player/watering_state.gd" id="9_oeunj"]
+[ext_resource type="Script" uid="uid://b4r8rpa87b3fu" path="res://scenes/characters/player/idle_state.gd" id="4_yk7gr"]
+[ext_resource type="Script" uid="uid://cy0761dp1466h" path="res://scenes/characters/player/walk_state.gd" id="5_jfq05"]
+[ext_resource type="Script" uid="uid://n2vccdy6i0lf" path="res://scenes/characters/player/chopping_state.gd" id="7_x2wlb"]
+[ext_resource type="Script" uid="uid://3i4xwf6b8ymf" path="res://scenes/characters/player/tilling_state.gd" id="8_c87pa"]
+[ext_resource type="Script" uid="uid://c0asxq6vpxtxu" path="res://scenes/characters/player/watering_state.gd" id="9_oeunj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_yk7gr"]
 atlas = ExtResource("1_hynwy")
@@ -394,7 +394,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_00muo"]
-radius = 8.0
+radius = 4.0
 
 [node name="player" type="CharacterBody2D"]
 script = ExtResource("1_swbuq")
@@ -407,7 +407,7 @@ animation = &"watering_back"
 autoplay = "idle_front"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -8)
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_00muo")
 
 [node name="StateMachine" type="Node" parent="." node_paths=PackedStringArray("initial_node_state")]
