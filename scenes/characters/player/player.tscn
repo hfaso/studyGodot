@@ -397,6 +397,7 @@ animations = [{
 radius = 4.0
 
 [node name="player" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_swbuq")
 current_tool = 1
 
