@@ -48,10 +48,19 @@ navigation_polygon = SubResource("NavigationPolygon_6nbhr")
 position = Vector2(540, 312)
 
 [node name="Chicken2" parent="Chickens" instance=ExtResource("3_6nbhr")]
-position = Vector2(573, 285)
+position = Vector2(580, 339)
 
 [node name="Chicken3" parent="Chickens" instance=ExtResource("3_6nbhr")]
-position = Vector2(594, 316)
+position = Vector2(600, 321)
 
 [node name="Chicken4" parent="Chickens" instance=ExtResource("3_6nbhr")]
-position = Vector2(563, 338)
+position = Vector2(591, 293)
+
+[node name="Chicken5" parent="Chickens" instance=ExtResource("3_6nbhr")]
+position = Vector2(559, 286)
+
+[node name="Chicken6" parent="Chickens" instance=ExtResource("3_6nbhr")]
+position = Vector2(510, 299)
+
+[node name="Chicken7" parent="Chickens" instance=ExtResource("3_6nbhr")]
+position = Vector2(524, 337)
