@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=3 uid="uid://c6ap86bpye7n1"]
+
+[ext_resource type="Script" uid="uid://l0etvqdblkq5" path="res://scenes/objects/plants/tomato.gd" id="1_i4hd5"]
+[ext_resource type="Texture2D" uid="uid://c2llaohm6na24" path="res://assets/game/objects/basic_plants.png" id="1_tixv0"]
+[ext_resource type="PackedScene" uid="uid://d1sm8nfa8g8w0" path="res://scenes/objects/plants/watering_particles.tscn" id="2_vn5rf"]
+[ext_resource type="PackedScene" uid="uid://bsfeoixk6pku6" path="res://scenes/objects/plants/flowering_particles.tscn" id="3_i4hd5"]
+[ext_resource type="PackedScene" uid="uid://6ggtkwpb3xgs" path="res://scenes/objects/plants/growth_cycle_component.tscn" id="4_huvgt"]
+[ext_resource type="PackedScene" uid="uid://duhnc0tcn7yyu" path="res://scenes/components/hurt_component.tscn" id="5_83wcf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wpajg"]
+size = Vector2(16, 6.5)
+
+[node name="Tomato" type="Node2D"]
+script = ExtResource("1_i4hd5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_tixv0")
+hframes = 6
+vframes = 2
+frame = 7
+
+[node name="WateringParticles" parent="." instance=ExtResource("2_vn5rf")]
+
+[node name="FloweringParticles" parent="." instance=ExtResource("3_i4hd5")]
+
+[node name="GrowthCycleComponent" parent="." instance=ExtResource("4_huvgt")]
+
+[node name="HurtComponent" parent="." instance=ExtResource("5_83wcf")]
+tool = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtComponent"]
+position = Vector2(0, 5)
+shape = SubResource("RectangleShape2D_wpajg")
