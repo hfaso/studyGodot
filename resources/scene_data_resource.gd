@@ -14,7 +14,7 @@ func _load_data(window: Window) -> void:
 	var parent_node: Node2D
 	var scene_node: Node2D
 	
-	if parent_node != null:
+	if parent_node_path != null:
 		parent_node = window.get_node_or_null(parent_node_path)
 		
 	if node_path != null:
@@ -22,5 +22,5 @@ func _load_data(window: Window) -> void:
 		scene_node = scene_file_resource.instantiate() as Node2D
 		
 	if parent_node != null and scene_node != null:
-		scene_node.global_postion = global_position
+		scene_node.global_position = global_position
 		parent_node.add_child(scene_node)	
