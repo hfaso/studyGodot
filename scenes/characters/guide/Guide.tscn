@@ -1,0 +1,63 @@
+[gd_scene load_steps=11 format=3 uid="uid://dwbu67vkv6n1y"]
+
+[ext_resource type="Shader" uid="uid://m8aho87s2otj" path="res://scenes/characters/guide/replace_color.gdshader" id="1_okmrk"]
+[ext_resource type="Script" uid="uid://di6guojysiqmg" path="res://scenes/characters/guide/guide.gd" id="1_w26v8"]
+[ext_resource type="Texture2D" uid="uid://d4lbtess564jk" path="res://assets/game/characters/basic_charakter_spritesheet.png" id="2_1v5xl"]
+[ext_resource type="PackedScene" uid="uid://d4b13d33w7n11" path="res://scenes/components/interactable_component.tscn" id="3_1v5xl"]
+[ext_resource type="PackedScene" uid="uid://du34whwptgo1n" path="res://scenes/components/interactable_label_component.tscn" id="4_dd7cp"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_dd7cp"]
+shader = ExtResource("1_okmrk")
+shader_parameter/original_0 = Color(0.360784, 0.305882, 0.572549, 1)
+shader_parameter/original_1 = Color(0.462745, 0.427451, 0.666667, 1)
+shader_parameter/replace_0 = Color(0.878431, 0.101961, 0.384314, 1)
+shader_parameter/replace_1 = Color(0.815686, 0.341176, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w26v8"]
+atlas = ExtResource("2_1v5xl")
+region = Rect2(0, 0, 48, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oju1r"]
+atlas = ExtResource("2_1v5xl")
+region = Rect2(48, 0, 48, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p3056"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w26v8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oju1r")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dd7cp"]
+radius = 19.0
+
+[node name="Guide" type="Node2D"]
+script = ExtResource("1_w26v8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_dd7cp")
+position = Vector2(0, -8)
+sprite_frames = SubResource("SpriteFrames_p3056")
+animation = &"idle"
+autoplay = "idle"
+frame = 1
+frame_progress = 0.0624979
+
+[node name="InteractableComponent" parent="." instance=ExtResource("3_1v5xl")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_dd7cp")
+
+[node name="InteractableLabelComponent" parent="." instance=ExtResource("4_dd7cp")]
+offset_left = -28.0
+offset_top = -35.0
+offset_right = -10.0
+offset_bottom = -17.0
