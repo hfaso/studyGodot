@@ -1,14 +1,17 @@
-[gd_scene load_steps=5 format=3 uid="uid://bckvvc7pnx1gi"]
+[gd_scene load_steps=9 format=3 uid="uid://bckvvc7pnx1gi"]
 
 [ext_resource type="PackedScene" uid="uid://j6h34q8pgwi3" path="res://scenes/components/day_night_cycle_component.tscn" id="1_pw63i"]
 [ext_resource type="PackedScene" uid="uid://bmeko7flp6mjm" path="res://scenes/ui/game_screen.tscn" id="2_7ykc4"]
 [ext_resource type="PackedScene" uid="uid://sim1vuwc5typ" path="res://scenes/levels/level_1.tscn" id="2_pu3yx"]
 [ext_resource type="PackedScene" uid="uid://u1d6c15qfvrg" path="res://scenes/characters/player/player.tscn" id="3_pu3yx"]
+[ext_resource type="PackedScene" uid="uid://diq2okdy72p0q" path="res://scenes/components/field_cursor_component.tscn" id="4_18nlu"]
+[ext_resource type="Script" uid="uid://ci2na46ni8jmc" path="res://scenes/components/field_cursor_component.gd" id="5_c1pb6"]
+[ext_resource type="PackedScene" uid="uid://d2mdsi2lkub6g" path="res://scenes/components/crops_cursor_component.tscn" id="6_6wevv"]
+[ext_resource type="Script" uid="uid://81g46j6mckqf" path="res://scenes/components/crops_cursor_component.gd" id="7_e1cbu"]
 
 [node name="MainScene" type="Node"]
 
 [node name="DayNightCycleComponent" parent="." instance=ExtResource("1_pw63i")]
-visible = false
 
 [node name="GameRoot" type="Node2D" parent="."]
 y_sort_enabled = true
@@ -22,5 +25,11 @@ y_sort_enabled = true
 position = Vector2(336, 289)
 
 [node name="Camera2D" type="Camera2D" parent="GameRoot/Player"]
+
+[node name="FieldCursorComponent" parent="GameRoot/Player" instance=ExtResource("4_18nlu")]
+script = ExtResource("5_c1pb6")
+
+[node name="CropsCursorComponent" parent="GameRoot/Player" instance=ExtResource("6_6wevv")]
+script = ExtResource("7_e1cbu")
 
 [node name="GameScreen" parent="." instance=ExtResource("2_7ykc4")]

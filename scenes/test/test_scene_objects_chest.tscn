@@ -48,18 +48,18 @@ position = Vector2(568, 368)
 [node name="TomatoHarvest4" parent="HarvestCollectables" instance=ExtResource("3_28ly8")]
 position = Vector2(602, 367)
 
-[node name="player" parent="." instance=ExtResource("2_aa5yh")]
-position = Vector2(410, 359)
-current_tool = 3
-
-[node name="GameScreen" parent="." instance=ExtResource("3_0qf2n")]
-
 [node name="CowPastureBox" parent="." instance=ExtResource("4_uhn3q")]
 position = Vector2(440, 286)
 dialogue_start_command = "start_cow_pasture_box"
 output_reward_scenes = Array[PackedScene]([ExtResource("7_f4hww")])
 
 [node name="ChickenPastureBox" parent="." instance=ExtResource("4_uhn3q")]
-position = Vector2(583, 283)
+position = Vector2(585, 287)
 dialogue_start_command = "start_chicken_pasture_box"
 output_reward_scenes = Array[PackedScene]([ExtResource("8_aa5yh")])
+
+[node name="player" parent="." instance=ExtResource("2_aa5yh")]
+position = Vector2(410, 359)
+current_tool = 3
+
+[node name="GameScreen" parent="." instance=ExtResource("3_0qf2n")]
